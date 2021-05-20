@@ -4,4 +4,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <com.mcc.integrated.calendar.MccCalendarView
+            android:id="@+id/mcc_calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 </LinearLayout>
