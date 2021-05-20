@@ -20,14 +20,14 @@ public class HttpsClient {
         return stringBuilder.toString();
     }
 
-    protected Response get(String url, Map<String, String> param) throws IOException {
+    public Response get(String url, Map<String, String> param) throws IOException {
         String paramString = makeParamString(param);
         url += '?' + paramString;
 
         return get(url);
     }
 
-    protected Response get(String url) throws IOException {
+    public Response get(String url) throws IOException {
         URL URL = new URL(url);
         HttpsURLConnection connection = (HttpsURLConnection) URL.openConnection();
         connection.setRequestMethod("GET");
@@ -35,7 +35,7 @@ public class HttpsClient {
         return new Response(connection);
     }
 
-    protected Response post(String url, Map<String, String> data) throws IOException {
+    public Response post(String url, Map<String, String> data) throws IOException {
         String dataString = makeParamString(data);
 
         URL URL = new URL(url);
