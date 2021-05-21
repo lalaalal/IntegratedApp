@@ -41,7 +41,8 @@ public class TodoCardView extends MaterialCardView {
     }
 
     private void updateView() {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd a hh:mm", Locale.KOREAN);
+        Locale locale = getResources().getConfiguration().getLocales().get(0);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd a hh:mm", locale);
         String deadline = dateFormat.format(todo.deadline);
 
         courseTv.setText(todo.course);
