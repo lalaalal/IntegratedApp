@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IntegratedApp</string>
+    <string name="load_status_loading">로딩중</string>
+    <string name="nothing_card_view_text">없음</string>
+    <string name="load_status_succeed">성공</string>
+</resources>
