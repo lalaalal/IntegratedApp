@@ -2,6 +2,8 @@ package com.mcc.integrated.calendar;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.google.android.material.card.MaterialCardView;
 import com.mcc.integrated.R;
@@ -34,6 +36,12 @@ public class TodoCardView extends MaterialCardView {
 
     public void init() {
         inflate(getContext(), R.layout.card_view_todo, this);
+        LayoutParams params = new LayoutParams(
+                LayoutParams.MATCH_PARENT,
+                LayoutParams.WRAP_CONTENT
+        );
+        params.setMargins(10, 10, 10, 10);
+        setLayoutParams(params);
 
         courseTv = findViewById(R.id.course_tv);
         messageTv = findViewById(R.id.message_tv);
