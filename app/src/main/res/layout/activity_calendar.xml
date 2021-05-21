@@ -2,10 +2,19 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <com.mcc.integrated.calendar.MccCalendarView
             android:id="@+id/mcc_calendar_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    <TextView
+            android:padding="15dp"
+            android:id="@+id/load_status_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/load_status_loading"/>
 </LinearLayout>
