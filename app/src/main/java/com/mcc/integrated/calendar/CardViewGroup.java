@@ -14,18 +14,21 @@ public class CardViewGroup extends LinearLayout {
 
     public CardViewGroup(Context context) {
         super(context);
-        setOrientation(VERTICAL);
-        setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        init();
     }
 
     public CardViewGroup(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        setOrientation(VERTICAL);
-        setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        init();
     }
 
     public CardViewGroup(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setOrientation(VERTICAL);
+        init();
+    }
+
+    private void init() {
         setOrientation(VERTICAL);
         setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
     }

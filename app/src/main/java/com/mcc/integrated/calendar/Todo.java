@@ -18,8 +18,7 @@ public class Todo {
             this.KEY_NAME = keyName;
         }
     }
-
-    private static final String KEY_CATEGORY = "category";
+    
     private static final String KEY_MESSAGE = "message";
     private static final String KEY_COURSE = "course";
     private static final String KEY_DEADLINE = "deadline";
