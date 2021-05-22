@@ -9,5 +9,9 @@ public abstract class UIHandler<T> {
         this.activity = activity;
     }
 
-    public abstract void updateUI(T data);
+    public void updateUI(T data) {
+        activity.runOnUiThread(() -> runOnUIThread(data));
+    }
+
+    protected abstract void runOnUIThread(T data);
 }

@@ -43,9 +43,10 @@ public class CalendarActivity extends AppCompatActivity {
             super(activity);
         }
 
-        public void updateUI(ArrayList<Todo> todoList) {
+        @Override
+        protected void runOnUIThread(ArrayList<Todo> data) {
             loadStatusTv.setText(R.string.load_status_succeed);
-            activity.runOnUiThread(() -> mccCalendarView.setTodoList(todoList));
+            mccCalendarView.setTodoList(data);
         }
     }
 }
