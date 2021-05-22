@@ -37,11 +37,10 @@ public class CalendarActivity extends AppCompatActivity {
         client.load(id);
     }
 
-    public class CalendarUIHandler {
-        private final Activity activity;
+    public class CalendarUIHandler extends UIHandler<ArrayList<Todo>> {
 
         public CalendarUIHandler(Activity activity) {
-            this.activity = activity;
+            super(activity);
         }
 
         public void updateUI(ArrayList<Todo> todoList) {

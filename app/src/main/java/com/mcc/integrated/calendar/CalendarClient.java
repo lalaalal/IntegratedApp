@@ -2,6 +2,7 @@ package com.mcc.integrated.calendar;
 
 import com.mcc.integrated.CalendarActivity;
 import com.mcc.integrated.HttpsClient;
+import com.mcc.integrated.UIHandler;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,9 +19,9 @@ public class CalendarClient {
     private static final String PARAM_KEY_ID = "userId";
     private static final String PARAM_KEY_PW = "passwd";
 
-    private final CalendarActivity.CalendarUIHandler uiHandler;
+    private final UIHandler<ArrayList<Todo>> uiHandler;
 
-    public CalendarClient(CalendarActivity.CalendarUIHandler uiHandler) {
+    public CalendarClient(UIHandler<ArrayList<Todo>> uiHandler) {
         this.uiHandler = uiHandler;
     }
 

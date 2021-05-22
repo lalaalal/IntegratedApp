@@ -52,9 +52,6 @@ public class MccCalendarView extends LinearLayout {
         Date currentDate = new Date(calendarView.getDate());
         ArrayList<Todo> visibleTodoList = findTodoListByDate(new CalendarViewDate(currentDate));
         todoCardViewGroup.setTodoList(visibleTodoList);
-//        for (Todo todo : visibleTodoList) {
-//            todoCardViewGroup.addTodo(todo);
-//        }
     }
 
     private ArrayList<Todo> findTodoListByDate(CalendarViewDate deadline) {
@@ -68,7 +65,7 @@ public class MccCalendarView extends LinearLayout {
         return list;
     }
 
-    public class CalendarViewDate {
+    public static class CalendarViewDate {
         public int year;
         public int month;
         public int dayOfMonth;
